@@ -1,6 +1,9 @@
 language: java
 sudo: true
 
+services:
+  -mysql
+
 before_build:
   -./gradlew assemble
   -./gradlew check
