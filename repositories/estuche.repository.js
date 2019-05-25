@@ -16,7 +16,9 @@ exports.altaModeloEstuche =(marca, material, color, codigo, stock = 0)  => {
     }).save();                
 };
 
-
+exports.findAll = () => {
+    return Estuche.find();
+}
 
 exports.stockDeEstuche = (marca, material, color, codigo) => {
     console.log(marca, material,color, codigo);
