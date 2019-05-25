@@ -19,17 +19,16 @@ exports.altaModeloEstuche = (req, res) => {
 }
 
 exports.stockDeEstuche = function (req, res){
-    estucheRepository.stockDeEstuche(req.params.marca, req.params.material, req.params.color, req.params.codigo)
+    estucheRepository.stockDeEstuche(req.query.marca, req.query.material, req.query.color, req.query.codigo)
                         .then( stock =>{
                             res.status(200).json({
                                 ok:true,
                                 stock 
-                            })
+                            }); })
                         .catch( err => {
                             res.status(500).json({
                                 ok:false,
                                 err
                             })
                         });
-                     });
 }

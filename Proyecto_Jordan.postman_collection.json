@@ -6,6 +6,42 @@
 	},
 	"item": [
 		{
+			"name": "ESTUCHE",
+			"item": [
+				{
+					"name": "ESTUCHE: Dar de alta un modelo en el sistema.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t\"marca\" : \"Ray-Ban\", \n\t\"material\" : \"Plastico\", \n\t\"color\" : \"Negro\", \n\t\"codigo\" : \"E001\", \n\t\"stock\" : \"10\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/estuche",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"estuche"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "GET- Verificacion de servicio",
 			"request": {
 				"method": "GET",
@@ -19,6 +55,57 @@
 					"port": "3000",
 					"path": [
 						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ESTUCHE: Consultar stock",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/estuche/stock?marca=Ray-Ban&material=Plastico&color=Negro&codigo=E001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"estuche",
+						"stock"
+					],
+					"query": [
+						{
+							"key": "marca",
+							"value": "Ray-Ban"
+						},
+						{
+							"key": "material",
+							"value": "Plastico"
+						},
+						{
+							"key": "color",
+							"value": "Negro"
+						},
+						{
+							"key": "codigo",
+							"value": "E001"
+						},
+						{
+							"key": null,
+							"value": null
+						},
+						{
+							"key": null,
+							"value": null
+						},
+						{
+							"key": null,
+							"value": null
+						}
 					]
 				}
 			},

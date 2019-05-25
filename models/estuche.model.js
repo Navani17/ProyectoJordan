@@ -22,7 +22,7 @@ var estucheSchema = Schema({
         required: true 
     },
     stock: {
-        type : Numbers, 
+        type : Number, 
         default: 0
     }
     

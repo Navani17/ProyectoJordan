@@ -10,6 +10,6 @@ let estucheController = require('../controllers/estuche.controller');
 // PATCH: Se utiliza para modificar solo una parte de una entidad que ya existe (ejemplo: subirle el stock).
 
 app.get('/stock', estucheController.stockDeEstuche);
-app.post('/stock', estucheController.altaModeloEstuche);
+app.post('/', estucheController.altaModeloEstuche);
 
 module.exports = app;
