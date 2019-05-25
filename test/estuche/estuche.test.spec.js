@@ -1,10 +1,7 @@
 describe('dao', ()=>{
     const assert = require('assert');
     const mongoose = require('mongoose');
-    const mongoUnit = require('../../node_modules/mongo-unit/index')
-    const testData = require('../data.json');
     const estucheRepository= require('../../repositories/estuche.repository');
-  //  var db;
     
     before(function(done) {
       //Another possibility is to check if mongoose.connection.readyState equals 1

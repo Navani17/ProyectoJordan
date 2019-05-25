@@ -21,7 +21,6 @@ exports.findAll = () => {
 }
 
 exports.stockDeEstuche = (marca, material, color, codigo) => {
-    console.log(marca, material,color, codigo);
     return Estuche.findOne({marca: marca, 
                             material: material, 
                             color: color, 
