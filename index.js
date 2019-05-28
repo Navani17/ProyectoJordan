@@ -37,13 +37,17 @@ mongoose.connection.openUri(MONGURI,
 // ../ sube un nivel en el arbol de directorio.
 let appRoutes = require('./api-routes/app');
 let estucheRoutes = require('./api-routes/estuches.routes');
+let cristalRoutes = require('./api-routes/cristal.routes');
+
 
 
 // IMPORTANTE!!! WARNING!!!! Cuidado al ingresar rutas aca, esto es lazy. 
 // Eso significa: Entra por la primer ruta que matchee 
 // Si ponemos primero la raiz (/) va a entrar todo por ahi y el resto de las rutas QUEDAN INACCESIBLES.
 app.use('/api/estuche', estucheRoutes);
+app.use('/api/cristal', cristalRoutes)
 app.use('/api', appRoutes);
+
 
 
 // Designacion de puerto por donde escucha la app.

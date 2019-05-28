@@ -5,7 +5,7 @@ let app = express();
 app.get('/', function (req, res, next) {
     res.status(200).json({
         ok: true,
-        message: 'Welcome to PetHeroes API!',
+        message: 'bienvenidos a Jordan',
     });
 });
 

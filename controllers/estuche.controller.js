@@ -18,17 +18,25 @@ exports.altaModeloEstuche = (req, res) => {
                         });
 }
 
-exports.stockDeEstuche = function (req, res){
+exports.stockDeEstuche = (req, res) =>{
     estucheRepository.stockDeEstuche(req.query.marca, req.query.material, req.query.color, req.query.codigo)
                         .then( stock =>{
-                            res.status(200).json({
-                                ok:true,
-                                stock 
-                            }); })
+                            if(!stock){
+                                res.status(200).json({
+                                    ok: false,
+                                    message: "no existe un estuche con esas caracteristicas"
+                                });
+                            }else{
+                                res.status(200).json({
+                                    ok:true,
+                                    stock 
+                                });
+                            }
+                        })
                         .catch( err => {
                             res.status(500).json({
                                 ok:false,
                                 err
                             })
                         });
-}
+} 
